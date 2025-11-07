@@ -1,0 +1,23 @@
+BEGIN
+    length ← 0
+    wordCount ← 1
+    vowelCount ← 0
+
+    READ sentence (ending with a period '.')
+
+    FOR each character ch in sentence UNTIL ch = '.'
+        length ← length + 1
+
+        IF ch = ' ' THEN
+            wordCount ← wordCount + 1
+        ENDIF
+
+        IF ch is one of (a, e, i, o, u, A, E, I, O, U) THEN
+            vowelCount ← vowelCount + 1
+        ENDIF
+    END FOR
+
+    PRINT "Length of sentence = ", length
+    PRINT "Number of words = ", wordCount
+    PRINT "Number of vowels = ", vowelCount
+END
